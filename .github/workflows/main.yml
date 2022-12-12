@@ -1,0 +1,29 @@
+name: Github-Automation
+
+
+
+on: 
+  push:
+    branches: 
+      - main
+
+  
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+
+    steps:  
+  
+    - name: update github repo secrets
+      run: |
+           curl -u Ramya-ravindra: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  https://api.github.com/repos/Ramya-ravindra/test-repo-api2/actions/secrets
+          # curl -X PUT -H "Authorization: token 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" -H "Content-Type: application/json" -i https://api.github.com/repos/practice-test-organisation/test-repo-api2/actions/secrets/CACHIX_SIGNING_KEY -d '{"key_id": "568250167242549743", "encrypted_value": "$ENCRYPTED_CACHIX_SIGNING_KEY"}'
+          # curl -u Ramya-ravindra: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  https://api.github.com/orgs/practice-test-organisation/actions/secrets/keyvalue  -d '{"visibility":"selected"}'
+             # curl -u Ramya-ravindra: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  https://api.github.com/orgs/practice-test-organisation/actions/secrets/XYZ/repositories
+            #  curl -u Ramya-ravindra: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  https://api.github.com/orgs/practice-test-organisation/actions/secrets/CACHIX_SIGNING_KEY -d '{"key_id": "568250167242549743", "encrypted_value": "$ENCRYPTED_CACHIX_SIGNING_KEY"}'
+             #curl -u Ramya-ravindra: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   https://api.github.com/orgs/practice-test-organisation/actions/secrets/public-key
+            #curl -u Ramya-ravindra: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  https://api.github.com/orgs/practice-test-organisation/actions/secrets
+            # curl -u Ramya-ravindra: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 https://api.github.com/orgs/practice-test-organisation/repos -d '{"name":"test-repo-api2"}'
+        
+        
+        
