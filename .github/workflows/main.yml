@@ -16,5 +16,5 @@ jobs:
   
     - name: update github repo secrets
       run: |
-          echo " {{secret.Test_secret}}
+          echo "{{secret.Test_secret}}"
         
