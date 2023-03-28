@@ -18,8 +18,10 @@ jobs:
     - name: Step 6 - Intall CF-CLI
       run: |
       
-         curl -L "https://packages.cloudfoundry.org/stable?release=linux64-binary&version=v8&source=github" 
-          
+       wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
+       echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
+       sudo apt-get update
+       sudo apt-get install cf8-cli
   
 #     - name: update github repo secrets
 #       run: |
